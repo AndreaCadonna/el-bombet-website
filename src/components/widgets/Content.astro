@@ -5,6 +5,7 @@ import WidgetWrapper from '../ui/WidgetWrapper.astro';
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import ItemGrid from '../ui/ItemGrid.astro';
+import CarouselCasaNegrano from './CarouselCasaNegrano';
 
 const {
   title = await Astro.slots.render('title'),
@@ -17,12 +18,15 @@ const {
   image = await Astro.slots.render('image'),
   isReversed = false,
   isAfterContent = false,
+  images = [],
 
   id,
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
+
+
 ---
 
 <WidgetWrapper
@@ -68,8 +72,8 @@ const {
           }}
         />
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-        {
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 flex justify-center">
+        <!-- {
           image && (
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
@@ -87,7 +91,8 @@ const {
               )}
             </div>
           )
-        }
+        } -->
+        <CarouselCasaNegrano images={images} client:load />
       </div>
     </div>
   </div>
