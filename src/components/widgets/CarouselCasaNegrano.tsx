@@ -14,7 +14,7 @@ export default function CarouselCasaNegrano({ images }: CarouselCasaNegranoProps
           <CarouselItem key={index} className="pl-1 ">
             <div className="p-1">
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
+                <CardContent className="flex aspect-[3/4] items-center justify-center p-6">
                   <img
                     loading="lazy"
                     src={image.src}
