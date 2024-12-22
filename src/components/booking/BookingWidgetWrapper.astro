@@ -7,7 +7,21 @@ interface Props {
 }
 
 const { property } = Astro.props;
-const apiKey = import.meta.env.X_API_KEY;
+
+// Define environment variables explicitly
+const ENV = {
+  X_API_KEY: import.meta.env.X_API_KEY,
+  PROPERTY_IDS: {
+    SMALL: import.meta.env.SMALL_ID,
+    MEDIUM: import.meta.env.MEDIUM_ID,
+    LARGE: import.meta.env.LARGE_ID,
+  },
+} as const;
+
+// Validate environment variables at build time
+if (!ENV.X_API_KEY) {
+  throw new Error('X_API_KEY environment variable is not defined');
+}
 
 // Add max guests mapping
 const getMaxGuests = (propertySize: string): number => {
@@ -19,7 +33,7 @@ const getMaxGuests = (propertySize: string): number => {
     case 'large':
       return 8;
     default:
-      return 4; // Default to medium size
+      return 4;
   }
 };
 
@@ -27,14 +41,14 @@ const maxGuests = getMaxGuests(property);
 
 let availability: { room_type_id: string; property_id: string }[] | null = null;
 let minStayRules: { calendar_items: { date: string; prices: { min_stay: number }[] }[] } | null = null;
-let error = null;
+let error: string | null = null;
 
-const getPropertyId = (propertyKey: string) => {
-  const envKey = `${propertyKey.toUpperCase()}_ID`;
-  const propertyId = import.meta.env[envKey];
+const getPropertyId = (propertyKey: string): string => {
+  const envKey = propertyKey.toUpperCase() as keyof typeof ENV.PROPERTY_IDS;
+  const propertyId = ENV.PROPERTY_IDS[envKey];
 
   if (!propertyId) {
-    throw new Error(`Property ID not found for ${propertyKey}`);
+    throw new Error(`Property ID not found for ${propertyKey}. Please check your environment variables.`);
   }
 
   return propertyId;
@@ -55,9 +69,9 @@ try {
     `https://api.lodgify.com/v2/availability/${propertyId}?start=${startDate}&end=${endDate}`,
     {
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${ENV.X_API_KEY}`,
         'Content-Type': 'application/json',
-        'X-ApiKey': apiKey,
+        'X-ApiKey': ENV.X_API_KEY,
       },
     }
   );
@@ -78,9 +92,9 @@ try {
       `https://api.lodgify.com/v2/rates/calendar?roomTypeId=${roomTypeId}&houseId=${houseId}&startDate=${startDate}&endDate=${endDate}`,
       {
         headers: {
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${ENV.X_API_KEY}`,
           'Content-Type': 'application/json',
-          'X-ApiKey': apiKey,
+          'X-ApiKey': ENV.X_API_KEY,
         },
       }
     );
@@ -92,11 +106,11 @@ try {
     minStayRules = await ratesResponse.json();
   }
 } catch (e) {
-  error = e.message;
+  error = e instanceof Error ? e.message : 'An unknown error occurred';
 }
 ---
 
 <div>
   {error && <p class="text-red-500">{error}</p>}
-  <BookingWidget client:idle availability={availability} minStayRules={minStayRules} maxGuests={maxGuests}/>
+  <BookingWidget client:idle availability={availability} minStayRules={minStayRules} maxGuests={maxGuests} />
 </div>

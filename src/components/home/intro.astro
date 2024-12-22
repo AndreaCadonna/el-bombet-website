@@ -1,4 +1,5 @@
 ---
+import heroImage from '../../assets/images/suiteDeluxe/20241130_155610.webp';
 // src/components/IntroSection.astro
 ---
 
@@ -53,7 +54,7 @@
       <div class="w-full lg:w-1/2 overflow-hidden h-[50vh] lg:h-auto order-1 lg:order-2"> <!-- Modified height and added order -->
         <div class="w-full h-full">
           <img
-            src="./src/assets/images/suiteDeluxe/20241130_155610.webp"
+            src={heroImage.src}
             alt="Casa Negrano - Vista esterna"
             class="w-full h-full object-cover"
             loading="lazy"
