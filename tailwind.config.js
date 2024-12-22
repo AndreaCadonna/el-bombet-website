@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import typographyPlugin from '@tailwindcss/typography';
+import tailwindcssAnimate from 'tailwindcss-animate';
 
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
@@ -60,6 +61,6 @@ module.exports = {
       },
     },
   },
-  plugins: [typographyPlugin, require('tailwindcss-animate')],
-  // darkMode: ['class', 'class'],
+  plugins: [typographyPlugin, tailwindcssAnimate],
+  // darkMode: false,
 };

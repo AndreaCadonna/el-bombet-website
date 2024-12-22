@@ -3,6 +3,7 @@ import WidgetWrapper from '../ui/WidgetWrapper.astro';
 import type { CallToAction, Widget } from '~/types';
 import Headline from '~/components/ui/Headline.astro';
 import Button from '~/components/ui/Button.astro';
+import CalendarForm from './CalendarForm';
 
 interface Props extends Widget {
   title?: string;
@@ -36,10 +37,12 @@ const {
       classes={{
         container: 'mb-0 md:mb-0',
         title: 'text-4xl md:text-4xl font-bold tracking-tighter mb-4 font-heading',
-        subtitle: 'text-xl text-muted dark:text-slate-400',
+        subtitle: 'text-xl  dark:text-slate-400',
       }}
     />
-    {
+    <CalendarForm client:load />
+
+    <!-- {
       actions && (
         <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 mt-6">
           {Array.isArray(actions) ? (
@@ -53,6 +56,6 @@ const {
           )}
         </div>
       )
-    }
+    } -->
   </div>
 </WidgetWrapper>

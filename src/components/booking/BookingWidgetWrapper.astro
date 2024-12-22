@@ -1,0 +1,102 @@
+---
+// BookingWrapper.astro
+import BookingWidget from './BookingWidgetPerProperty';
+
+interface Props {
+  property: string;
+}
+
+const { property } = Astro.props;
+const apiKey = import.meta.env.X_API_KEY;
+
+// Add max guests mapping
+const getMaxGuests = (propertySize: string): number => {
+  switch (propertySize.toLowerCase()) {
+    case 'small':
+      return 2;
+    case 'medium':
+      return 4;
+    case 'large':
+      return 8;
+    default:
+      return 4; // Default to medium size
+  }
+};
+
+const maxGuests = getMaxGuests(property);
+
+let availability: { room_type_id: string; property_id: string }[] | null = null;
+let minStayRules: { calendar_items: { date: string; prices: { min_stay: number }[] }[] } | null = null;
+let error = null;
+
+const getPropertyId = (propertyKey: string) => {
+  const envKey = `${propertyKey.toUpperCase()}_ID`;
+  const propertyId = import.meta.env[envKey];
+
+  if (!propertyId) {
+    throw new Error(`Property ID not found for ${propertyKey}`);
+  }
+
+  return propertyId;
+};
+
+const now = new Date();
+const twoMonthsFromNow = new Date();
+twoMonthsFromNow.setMonth(now.getMonth() + 3);
+
+const startDate = now.toISOString();
+const endDate = twoMonthsFromNow.toISOString();
+
+try {
+  const propertyId = getPropertyId(property);
+
+  // First fetch availability to get room_type_id
+  const availabilityResponse = await fetch(
+    `https://api.lodgify.com/v2/availability/${propertyId}?start=${startDate}&end=${endDate}`,
+    {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'X-ApiKey': apiKey,
+      },
+    }
+  );
+
+  if (!availabilityResponse.ok) {
+    throw new Error('Failed to fetch availability');
+  }
+
+  availability = await availabilityResponse.json();
+
+  // Extract room_type_id from availability response
+  if (availability?.[0]?.room_type_id) {
+    const roomTypeId = availability[0].room_type_id;
+    const houseId = availability[0].property_id;
+
+    // Then fetch rates using the room_type_id and house_id
+    const ratesResponse = await fetch(
+      `https://api.lodgify.com/v2/rates/calendar?roomTypeId=${roomTypeId}&houseId=${houseId}&startDate=${startDate}&endDate=${endDate}`,
+      {
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+          'X-ApiKey': apiKey,
+        },
+      }
+    );
+
+    if (!ratesResponse.ok) {
+      throw new Error('Failed to fetch rates');
+    }
+
+    minStayRules = await ratesResponse.json();
+  }
+} catch (e) {
+  error = e.message;
+}
+---
+
+<div>
+  {error && <p class="text-red-500">{error}</p>}
+  <BookingWidget client:idle availability={availability} minStayRules={minStayRules} maxGuests={maxGuests}/>
+</div>
