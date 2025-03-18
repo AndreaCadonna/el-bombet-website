@@ -55,11 +55,11 @@ const getPropertyId = (propertyKey: string): string => {
 };
 
 const now = new Date();
-const twoMonthsFromNow = new Date();
-twoMonthsFromNow.setMonth(now.getMonth() + 3);
+const sixMonthsFromNow = new Date();
+sixMonthsFromNow.setMonth(now.getMonth() + 6);
 
 const startDate = now.toISOString();
-const endDate = twoMonthsFromNow.toISOString();
+const endDate = sixMonthsFromNow.toISOString();
 
 try {
   const propertyId = getPropertyId(property);
