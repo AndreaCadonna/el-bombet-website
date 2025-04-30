@@ -43,7 +43,7 @@ const CalendarForm = () => {
     };
 
     try {
-      const response = await fetch('https://n8n.negdigital.it/webhook/99e9a979-9ef4-472b-b75c-8f3dc29c40c1', {
+      const response = await fetch('https://n8n.casanegrano.it/webhook/99e9a979-9ef4-472b-b75c-8f3dc29c40c1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
