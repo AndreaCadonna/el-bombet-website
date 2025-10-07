@@ -39,11 +39,7 @@ export const footerData = {
         { text: 'I nostri comfort', href: '#comfort' },
         { text: 'Testimonianze', href: '#testimonianze' },
       ],
-    },
-    {
-      title: 'Codici CIN',
-      links: [{ text: 'IT022205C2A7J22SB7' }, { text: 'IT022205C269BP38G3' }, { text: 'IT022205C2I72MMQXZ' }],
-    },
+    }
   ],
   secondaryLinks: [
     { text: 'Cookies', href: getPermalink('/cookies') },
@@ -58,6 +54,9 @@ export const footerData = {
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],
   footNote: `
+      Codici CIN: IT022205C2A7J22SB7 | IT022205C269BP38G3 | IT022205C2I72MMQXZ
+      <br />
+      &copy; 2025 Casa Negrano. Tutti i diritti riservati.
     
   `,
 };

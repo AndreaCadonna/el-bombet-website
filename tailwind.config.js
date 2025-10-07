@@ -74,13 +74,13 @@ module.exports = {
     backdropSepia: false,
     
     // Disable scroll utilities if not used
-    scrollSnapType: false,
-    scrollSnapAlign: false,
-    scrollMargin: false,
-    scrollPadding: false,
+    // scrollSnapType: false,
+    // scrollSnapAlign: false,
+    // scrollMargin: false,
+    // scrollPadding: false,
     
     // Disable touch utilities if desktop-only
-    touchAction: false,
+    // touchAction: false,
     
     // Disable 3D transforms if not used
     transformStyle: false,
