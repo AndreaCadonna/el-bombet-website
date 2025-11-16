@@ -39,15 +39,15 @@ const roomImages = await Promise.all(
 );
 ---
 
-<section class="py-12 md:py-16 lg:py-24 bg-gray-50">
+<section class="py-12 md:py-16 lg:py-24 bg-luxury-cream">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Title -->
     <div class="text-center mb-12 md:mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Gli spazi dell'appartamento</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-medium text-luxury-black mb-4">Gli spazi dell'appartamento</h2>
+      <p class="text-lg text-luxury-graphite max-w-2xl mx-auto">
         Scopri ogni ambiente nel dettaglio, pensato per offrirti comfort e funzionalità
       </p>
-      <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      <div class="w-20 h-0.5 bg-luxury-gold mx-auto mt-4"></div>
     </div>
 
     <!-- Room Cards - Alternating Layout -->
@@ -65,11 +65,11 @@ const roomImages = await Promise.all(
             <div class={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
               {/* Image Column */}
               <div class={`${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                <div class="relative rounded-xl overflow-hidden shadow-xl group">
+                <div class="relative rounded overflow-hidden shadow-luxury-lg group">
                   <Image
                     src={roomImage}
                     alt={`${room.name} - Casa Negrano`}
-                    class="w-full h-full object-cover aspect-[4/3] transition-transform duration-300 group-hover:scale-105"
+                    class="w-full h-full object-cover aspect-[4/3] transition-transform duration-400 group-hover:scale-105"
                     widths={[400, 600, 800, 1000]}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
@@ -77,16 +77,16 @@ const roomImages = await Promise.all(
                     quality={85}
                   />
                   {/* Overlay on hover */}
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-luxury-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
                 </div>
               </div>
 
               {/* Content Column */}
               <div class={`${isEven ? 'lg:order-2' : 'lg:order-1'} space-y-4 lg:space-y-6`}>
                 {/* Room Name */}
-                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <h3 class="font-heading text-2xl md:text-3xl font-medium text-luxury-black flex items-center gap-3">
+                  <div class="w-10 h-10 rounded bg-luxury-gold flex items-center justify-center flex-shrink-0">
+                    <svg class="w-6 h-6 text-luxury-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -100,7 +100,7 @@ const roomImages = await Promise.all(
 
                 {/* Room Description */}
                 <div class="prose prose-lg max-w-none">
-                  <p class="text-gray-700 leading-relaxed">
+                  <p class="text-luxury-graphite leading-relaxed">
                     {room.description}
                   </p>
                 </div>
@@ -108,14 +108,14 @@ const roomImages = await Promise.all(
                 {/* Amenities List (if available) */}
                 {room.amenities && room.amenities.length > 0 && (
                   <div class="mt-6">
-                    <h4 class="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-3">
+                    <h4 class="text-sm font-medium text-luxury-graphite uppercase tracking-wider mb-3">
                       Dotazioni
                     </h4>
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {room.amenities.map((amenity) => (
                         <li class="flex items-start gap-2">
                           <svg
-                            class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
+                            class="w-5 h-5 text-luxury-gold flex-shrink-0 mt-0.5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -127,7 +127,7 @@ const roomImages = await Promise.all(
                               d="M5 13l4 4L19 7"
                             ></path>
                           </svg>
-                          <span class="text-gray-700">{amenity}</span>
+                          <span class="text-luxury-graphite">{amenity}</span>
                         </li>
                       ))}
                     </ul>
