@@ -6,10 +6,20 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { getContactFormWebhook, isContactFormEnabled } from "@/config";
 
-
-
+/**
+ * CalendarForm Component
+ * Contact/booking request form with date pickers
+ *
+ * Configuration:
+ * - Webhook URL is configured in src/config/site.config.ts
+ * - Form labels are currently hardcoded (will be moved to content files in Phase 2)
+ */
 const CalendarForm = () => {
+  // Get webhook URL from centralized config
+  const webhookUrl = getContactFormWebhook();
+  const formEnabled = isContactFormEnabled();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -43,7 +53,11 @@ const CalendarForm = () => {
     };
  
     try {
-      const response = await fetch('https://n8n.casanegrano.it/webhook/99e9a979-9ef4-472b-b75c-8f3dc29c40c1', {
+      if (!webhookUrl) {
+        throw new Error('Contact form webhook URL not configured');
+      }
+
+      const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -68,6 +82,22 @@ const CalendarForm = () => {
   };
 
   const today = new Date();
+
+  // If form is disabled in config, show a message
+  if (!formEnabled) {
+    return (
+      <div className="w-full max-w-4xl mx-auto py-6 md:p-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Contattaci</CardTitle>
+            <CardDescription>
+              Il modulo di contatto non è attualmente disponibile. Contattaci direttamente via email.
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-4xl mx-auto py-6 md:p-6">
