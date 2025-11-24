@@ -1,155 +1,190 @@
 # =============================================================================
-# Property Configuration: Property 1 - One Bedroom Apartment (Template)
+# Property Configuration: El Bombet
 # =============================================================================
-# This file defines all data for a single property/apartment
-# Edit this file to customize the property details
+# Mini appartamento nel centro storico di Trento
 #
-# Images should be placed in: src/assets/images/property-1/
+# Images should be placed in: src/assets/images/el-bombet/
 # =============================================================================
 
 # -----------------------------------------------------------------------------
 # Basic Information
 # -----------------------------------------------------------------------------
-id: property-1
-slug: property-1
+id: el-bombet
+slug: el-bombet
 published: true
 order: 1  # Display order (lower = first)
 
-name: "One Bedroom Apartment"
-subtitle: "Cozy apartment with private balcony"
+name: "El Bombet"
+subtitle: "Il tuo rifugio fra charme e comfort nel cuore di Trento"
 
 description: >
-  A charming one-bedroom apartment perfect for couples or solo travelers.
-  Features a comfortable bedroom, modern bathroom with shower, and a bright
-  living room with fully equipped kitchen. The private balcony offers a
-  peaceful retreat with scenic views, while modern interiors ensure all
-  comforts for a perfect stay.
+  El Bombet è un mini appartamento recentemente ristrutturato, situato nel centro
+  storico di Trento, in un tranquillo edificio tra i suggestivi vicoli del Quartiere
+  di San Pietro (storicamente "Contrada Todesca"). A soli 5 minuti a piedi da Piazza
+  Duomo e dai Mercatini di Natale, l'alloggio è ideale per chi desidera vivere la
+  città in comodità e tranquillità. L'appartamento si trova in un palazzo storico
+  del 1700 al piano terra, con ingresso indipendente.
 
-shortDescription: "Intimate and comfortable apartment with private balcony"
+shortDescription: "Appartamento nel cuore del centro storico, a 5 minuti da Piazza Duomo"
 
 # -----------------------------------------------------------------------------
 # Capacity & Size
 # -----------------------------------------------------------------------------
 capacity:
-  guests: 2
-  bedrooms: "1 double bedroom"
-  bathrooms: "1 bathroom with shower"
+  guests: 4
+  bedrooms: "1 camera matrimoniale"
+  bathrooms: "1 bagno privato"
   beds:
     double: 1
     single: 0
-    sofa: 0
+    sofa: 1
 
 size:
-  value: 70
+  value: 54
   unit: sqm
 
 # -----------------------------------------------------------------------------
 # Images
 # -----------------------------------------------------------------------------
-# Image filenames relative to src/assets/images/property-1/
+# Image filenames relative to src/assets/images/el-bombet/
 images:
-  hero: "hero.svg"
-  thumbnail: "thumbnail.svg"
+  hero: "755394727.webp"
+  thumbnail: "755394665.webp"
   # Gallery can be a folder path (loads all images) or array of filenames
-  gallery: "property-1"  # Will load from src/assets/images/property-1/
+  gallery: "el-bombet"  # Will load from src/assets/images/el-bombet/
 
 # -----------------------------------------------------------------------------
 # Rooms
 # -----------------------------------------------------------------------------
 rooms:
-  - name: "Bedroom"
+  - name: "Camera da Letto"
     description: >
-      Spacious double bedroom with large wardrobes, floor heating and cooling,
-      and direct access to the private balcony. The room is decorated with
-      modern taste and offers a tranquil atmosphere for perfect rest. The
-      double bed features a high-quality mattress for maximum comfort.
-    image: "bedroom.svg"
+      Camera matrimoniale spaziosa con letto matrimoniale large, armadio/guardaroba
+      e biancheria da letto di qualità. La camera offre un'atmosfera tranquilla
+      e confortevole per un riposo perfetto.
+    image: "755394661.webp"
     amenities:
-      - "Double bed"
-      - "Spacious wardrobe"
-      - "Balcony access"
-      - "Floor climate control"
+      - "Letto matrimoniale large"
+      - "Armadio/guardaroba"
+      - "Biancheria da letto"
 
-  - name: "Living Room"
+  - name: "Soggiorno"
     description: >
-      The bright living room combines comfort and functionality with a
-      comfortable sofa, flat-screen TV, and elegant dining area. Large
-      windows provide abundant natural light and splendid views. The
-      perfect space to relax after a day of exploration.
-    image: "living-room.svg"
+      Ingresso con soggiorno luminoso dotato di divano letto, TV a schermo piatto,
+      zona pranzo con tavolo e scrivania per lavorare. Lo spazio perfetto per
+      rilassarsi dopo una giornata alla scoperta di Trento.
+    image: "755394692.webp"
     amenities:
-      - "Sofa"
-      - "Flat-screen TV"
-      - "Dining table"
-      - "Large windows"
-      - "Floor climate control"
+      - "Divano letto"
+      - "TV a schermo piatto"
+      - "Tavolo da pranzo"
+      - "Scrivania"
 
-  - name: "Kitchen"
+  - name: "Angolo Cottura"
     description: >
-      Modern and fully equipped kitchen with everything you need to prepare
-      your favorite meals. Features refrigerator, induction cooktop, oven,
-      microwave, and complete utensils. The kitchen area integrates
-      perfectly with the living room, creating a convivial space.
-    image: "kitchen.svg"
+      Angolo cottura completamente attrezzato con tutto il necessario per preparare
+      i vostri pasti. Include frigorifero, piano cottura, forno, microonde, lavatrice,
+      macchina da caffè, bollitore elettrico e utensili da cucina completi.
+    image: "755394655.webp"
     amenities:
-      - "Refrigerator"
-      - "Induction cooktop"
-      - "Microwave"
-      - "Dishwasher"
-      - "Coffee maker"
-      - "Complete utensils"
+      - "Frigorifero"
+      - "Piano cottura"
+      - "Forno"
+      - "Microonde"
+      - "Lavatrice"
+      - "Macchina da caffè"
+      - "Bollitore elettrico"
+      - "Utensili da cucina"
+      - "Prodotti per la pulizia"
 
-  - name: "Bathroom"
+  - name: "Bagno"
     description: >
-      Modern bathroom with spacious shower, quality fixtures, and elegant
-      finishes. Equipped with hairdryer, courtesy set, and ample space for
-      your personal items. The spacious shower ensures comfort and
-      practicality.
-    image: "bathroom.svg"
+      Bagno privato moderno con doccia o vasca, bidet, asciugacapelli e prodotti
+      da bagno in omaggio. Asciugamani e carta igienica forniti per il vostro
+      comfort.
+    image: "755394719.webp"
     amenities:
-      - "Spacious shower"
-      - "Hairdryer"
-      - "Courtesy set"
-      - "Towels provided"
-
-  - name: "Balcony"
-    description: >
-      Private balcony equipped with table and chairs, perfect for enjoying
-      a morning coffee or relaxing in the evening while admiring the
-      panoramic views. An ideal space for moments of tranquility outdoors.
-    image: "balcony.svg"
-    amenities:
-      - "Table"
-      - "Chairs"
-      - "Panoramic view"
+      - "Doccia o vasca"
+      - "Bidet"
+      - "Asciugacapelli"
+      - "Prodotti da bagno in omaggio"
+      - "Asciugamani"
+      - "Carta igienica"
 
 # -----------------------------------------------------------------------------
 # Features & Amenities
 # -----------------------------------------------------------------------------
 features:
-  - "High-speed WiFi"
-  - "Parking included"
-  - "Private balcony"
-  - "Fully equipped kitchen"
-  - "Floor heating and cooling"
-  - "Flat-screen TV"
-  - "Linens and towels included"
-  - "Elevator"
-  - "Safe"
-  - "Cots and cribs available"
+  - "Aria condizionata"
+  - "Riscaldamento"
+  - "Ingresso indipendente"
+  - "WiFi gratuito"
+  - "TV a schermo piatto"
+  - "Parquet/pavimento in legno"
+  - "Appartamento al pian terreno"
+  - "Struttura non fumatori"
+  - "Check-in e check-out privati"
+  - "Cucina completamente attrezzata"
+  - "Lavatrice"
+  - "Biancheria e asciugamani inclusi"
+
+amenities:
+  - "Piano cottura"
+  - "Forno"
+  - "Microonde"
+  - "Frigorifero"
+  - "Macchina da caffè"
+  - "Bollitore elettrico"
+  - "Doccia o vasca"
+  - "Bidet"
+  - "Asciugacapelli"
+  - "Estintori"
+  - "Accesso con chiavi"
 
 # -----------------------------------------------------------------------------
 # Target Audience
 # -----------------------------------------------------------------------------
 idealFor:
-  - "Couples"
-  - "Solo travelers"
-  - "Business trips"
-  - "Romantic weekends"
+  - "Coppie"
+  - "Famiglie"
+  - "Viaggiatori singoli"
+  - "Viaggi d'affari"
+
+# -----------------------------------------------------------------------------
+# Additional Info
+# -----------------------------------------------------------------------------
+checkIn:
+  from: "15:00"
+  to: "23:30"
+  note: "Comunicare orario in anticipo"
+
+checkOut:
+  from: "08:00"
+  to: "11:00"
+
+rules:
+  - "Vietato fumare"
+  - "Feste/eventi non consentiti"
+  - "Animali non ammessi"
+  - "Età minima per il check-in: nessuna"
+
+nearbyPlaces:
+  - name: "Piazza Duomo"
+    distance: "500 m"
+  - name: "Castello del Buonconsiglio"
+    distance: "400 m"
+  - name: "Università di Trento"
+    distance: "400 m"
+  - name: "Stazione ferroviaria"
+    distance: "12-15 minuti a piedi"
+  - name: "MUSE"
+    distance: "1,4 km"
+  - name: "Mercatini di Natale"
+    distance: "5 minuti a piedi"
 
 # -----------------------------------------------------------------------------
 # SEO (optional - uses defaults from site config if not specified)
 # -----------------------------------------------------------------------------
 seo:
-  title: "One Bedroom Apartment - 2 Guests"
-  description: "Cozy one-bedroom apartment with equipped kitchen and private balcony. Perfect for couples."
+  title: "El Bombet - Appartamento Centro Storico Trento"
+  description: "Mini appartamento nel cuore di Trento, a 5 minuti da Piazza Duomo. Palazzo storico del 1700, recentemente ristrutturato. Ideale per coppie e famiglie."

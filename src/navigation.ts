@@ -13,43 +13,25 @@ export const headerData = {
       href: '/',
     },
     {
-      text: 'About Us',
+      text: 'Chi Siamo',
       href: '/#about',
     },
     {
-      text: 'Properties',
+      text: 'Appartamento',
       href: '/#properties',
-      links: [
-        {
-          text: 'One Bedroom Apartment',
-          href: '/properties/property-1',
-        },
-        {
-          text: 'Two Bedroom Apartment',
-          href: '/properties/property-2',
-        },
-        {
-          text: 'Deluxe Suite',
-          href: '/properties/property-3',
-        },
-        {
-          text: 'All Properties',
-          href: '/#properties',
-        },
-      ],
     },
     {
-      text: 'Amenities',
+      text: 'Servizi',
       href: '/#amenities',
     },
     {
-      text: 'Testimonials',
+      text: 'Recensioni',
       href: '/#testimonials',
     },
   ],
   actions: [
     {
-      text: 'Contact Us',
+      text: 'Contattaci',
       href: '/contact',
     },
   ],
@@ -58,22 +40,23 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Quick Links',
+      title: 'Link Rapidi',
       links: [
         { text: 'Home', href: '/' },
-        { text: 'About Us', href: '/#about' },
-        { text: 'Properties', href: '/#properties' },
-        { text: 'Amenities', href: '/#amenities' },
-        { text: 'Testimonials', href: '/#testimonials' },
-        { text: 'Contact', href: '/contact' },
+        { text: 'Chi Siamo', href: '/#about' },
+        { text: 'Appartamento', href: '/#properties' },
+        { text: 'Servizi', href: '/#amenities' },
+        { text: 'Recensioni', href: '/#testimonials' },
+        { text: 'Contatti', href: '/contact' },
       ],
     },
     {
-      title: 'Properties',
+      title: 'Informazioni',
       links: [
-        { text: 'One Bedroom Apartment', href: '/properties/property-1' },
-        { text: 'Two Bedroom Apartment', href: '/properties/property-2' },
-        { text: 'Deluxe Suite', href: '/properties/property-3' },
+        { text: 'El Bombet', href: '/properties/el-bombet' },
+        { text: 'Check-in: 15:00-23:30', href: '/#properties' },
+        { text: 'Check-out: 08:00-11:00', href: '/#properties' },
+        { text: 'Centro Storico Trento', href: '/#about' },
       ],
     },
   ],

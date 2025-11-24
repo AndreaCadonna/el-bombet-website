@@ -50,18 +50,18 @@ sections:
     title: "Vantaggi esclusivi"
     subtitle: "Trentino Guest Card inclusa"
   cta:
-    title: "Prenota {name}"
-    description: "Hai trovato l'appartamento perfetto per il tuo soggiorno? Contattaci per verificare la disponibilità e ricevere un preventivo personalizzato."
+    title: "Prenota El Bombet"
+    description: "Contattaci per verificare la disponibilità e prenotare il tuo soggiorno nel cuore del centro storico di Trento."
     button: "Verifica disponibilità"
     email_button: "Scrivi una email"
-    email_subject: "Richiesta informazioni per {name}"
+    email_subject: "Richiesta informazioni per El Bombet"
     features:
       response_title: "Risposta rapida"
       response_subtitle: "Entro 24 ore"
-      checkin_title: "Check-in flessibile"
-      checkin_subtitle: "Dalle 16:00"
-      price_title: "Miglior prezzo garantito"
-      price_subtitle: "Prenotazione diretta"
+      checkin_title: "Check-in privato"
+      checkin_subtitle: "Dalle 15:00 alle 23:30"
+      price_title: "Prenotazione diretta"
+      price_subtitle: "Con l'host Lorenzo"
 
 # -----------------------------------------------------------------------------
 # Rooms Section (for property pages)

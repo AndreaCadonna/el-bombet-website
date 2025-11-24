@@ -10,7 +10,7 @@
 page:
   tagline: "Contatti"
   title: "Mettiamoci in contatto!"
-  description: "Hai domande o vuoi prenotare? Siamo qui per aiutarti."
+  description: "Hai domande su El Bombet o vuoi prenotare il tuo soggiorno? Contatta Lorenzo per maggiori informazioni."
 
 # -----------------------------------------------------------------------------
 # Contact Form
@@ -73,5 +73,5 @@ messages:
 # SEO
 # -----------------------------------------------------------------------------
 seo:
-  title: "Contatti"
-  description: "Contattaci per informazioni e prenotazioni. Siamo a tua disposizione per rispondere a tutte le tue domande."
+  title: "Contatti - El Bombet Trento"
+  description: "Contatta Lorenzo per informazioni e prenotazioni per El Bombet, appartamento nel centro storico di Trento. Check-in privato e flessibile."

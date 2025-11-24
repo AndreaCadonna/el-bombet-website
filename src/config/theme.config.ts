@@ -26,75 +26,64 @@ const themeConfig: ThemeConfig = {
    * - 'minimal'  : Black, white, neutral
    * - 'custom'   : Use your own colors below
    */
-  preset: 'luxury',
+  preset: 'custom',
 
   // ==========================================================================
-  // COLOR PALETTE (Optional Overrides)
+  // COLOR PALETTE - Trentino Mountain Elegance
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset (not 'custom'), leave this section empty
-   * to use the preset's colors. Only add values here if you want to override
-   * specific colors from the preset.
-   *
-   * Colors can be specified as:
-   * - Hex: '#c9a961'
-   * - RGB: 'rgb(201, 169, 97)'
-   * - HSL: 'hsl(42, 50%, 58%)'
-   *
-   * When using 'custom' preset, all color values are required.
-   *
-   * Example override (uncomment to use):
-   * colors: {
-   *   primary: '#your-color',  // Override just the primary color
-   * },
+   * Elegant palette inspired by the Dolomites and Trentino Alps:
+   * - Dolomite rose (Enrosadira sunset effect on mountain peaks)
+   * - Deep alpine blue (crisp mountain sky)
+   * - Warm stone gray (Alpine granite and limestone)
+   * - Snow white (pristine mountain snow)
+   * - Slate gray (mountain shadows and stone)
    */
   colors: {
-    // Leave empty to use preset colors, or add specific overrides here
-    // primary: '#c9a961',      // Uncomment to override preset primary color
-    // secondary: '#f5f2ed',    // Uncomment to override preset secondary color
-    // accent: '#a98b5f',       // Uncomment to override preset accent color
-    // muted: '#e8e4dd',        // Uncomment to override preset muted color
-    // background: '#faf8f5',   // Uncomment to override preset background color
-    // foreground: '#1a1a1a',   // Uncomment to override preset foreground color
+    // Primary: Dolomite Rose (warm pink-beige from famous mountain stone)
+    primary: '#C89B7B',
+
+    // Secondary: Soft Alpine Stone (warm light gray)
+    secondary: '#E8E3DD',
+
+    // Accent: Deep Alpine Blue (mountain sky and lakes)
+    accent: '#2B5F7C',
+
+    // Muted: Mountain Mist (soft blue-gray)
+    muted: '#D4DADD',
+
+    // Background: Snow White (pristine, bright)
+    background: '#FAFAF8',
+
+    // Foreground: Slate Gray (deep mountain stone)
+    foreground: '#2C3639',
   },
 
   // ==========================================================================
-  // TYPOGRAPHY (Optional Overrides)
+  // TYPOGRAPHY - Elegant & Historic
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset, leave this section empty to use the
-   * preset's typography. Only add values here if you want to override
-   * specific typography settings from the preset.
-   *
-   * Popular font options:
-   * - Headings: 'Playfair Display', 'Merriweather', 'Montserrat', 'Lora'
-   * - Body: 'Inter', 'Open Sans', 'Roboto', 'Source Sans Pro'
+   * Typography matching the historic charm of the 1700s building:
+   * - Playfair Display for elegant, classic headings
+   * - Inter for modern, readable body text
    */
   typography: {
-    // Leave empty to use preset typography, or add specific overrides here
-    // headingFont: 'Playfair Display',
-    // bodyFont: 'Inter Variable',
-    // baseFontSize: 16,
-    // lineHeight: 1.6,
+    headingFont: 'Playfair Display',
+    bodyFont: 'Inter Variable',
+    baseFontSize: 16,
+    lineHeight: 1.6,
   },
 
   // ==========================================================================
-  // STYLE (Optional Overrides)
+  // STYLE - Warm & Natural
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset, leave this section empty to use the
-   * preset's style settings. Only add values here if you want to override
-   * specific style settings from the preset.
-   *
-   * Border radius options: 'none', 'small', 'medium', 'large', 'full'
-   * Shadow intensity options: 'none', 'light', 'medium', 'strong'
-   * Transition speed options: 'fast', 'normal', 'slow'
+   * Style settings to complement the natural wood and green palette
    */
   style: {
-    // Leave empty to use preset style, or add specific overrides here
-    // borderRadius: 'small',
-    // shadowIntensity: 'medium',
-    // transitionSpeed: 'normal',
+    borderRadius: 'small',
+    shadowIntensity: 'medium',
+    transitionSpeed: 'normal',
   },
 
   // ==========================================================================
