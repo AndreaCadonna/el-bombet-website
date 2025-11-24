@@ -29,34 +29,34 @@ const themeConfig: ThemeConfig = {
   preset: 'custom',
 
   // ==========================================================================
-  // COLOR PALETTE - El Bombet Nature & Wood Theme
+  // COLOR PALETTE - Trentino Mountain Elegance
   // ==========================================================================
   /**
-   * Custom color palette inspired by the historic 1700s building
-   * and natural elements of Trento:
-   * - Warm chestnut wood tones
-   * - Deep forest green from Alpine nature
-   * - Soft cream from historic stone walls
-   * - Earthy sage and olive accents
+   * Elegant palette inspired by the Dolomites and Trentino Alps:
+   * - Dolomite rose (Enrosadira sunset effect on mountain peaks)
+   * - Deep alpine blue (crisp mountain sky)
+   * - Warm stone gray (Alpine granite and limestone)
+   * - Snow white (pristine mountain snow)
+   * - Slate gray (mountain shadows and stone)
    */
   colors: {
-    // Primary: Warm chestnut wood (main brand color)
-    primary: '#8B5A3C',
+    // Primary: Dolomite Rose (warm pink-beige from famous mountain stone)
+    primary: '#C89B7B',
 
-    // Secondary: Soft warm cream (historic stone walls)
-    secondary: '#F5F1E8',
+    // Secondary: Soft Alpine Stone (warm light gray)
+    secondary: '#E8E3DD',
 
-    // Accent: Deep forest green (Alpine nature, historic shutters)
-    accent: '#2F5233',
+    // Accent: Deep Alpine Blue (mountain sky and lakes)
+    accent: '#2B5F7C',
 
-    // Muted: Soft sage olive (nature-inspired neutrals)
-    muted: '#E5E8DD',
+    // Muted: Mountain Mist (soft blue-gray)
+    muted: '#D4DADD',
 
-    // Background: Warm ivory (light, welcoming)
-    background: '#FFFBF5',
+    // Background: Snow White (pristine, bright)
+    background: '#FAFAF8',
 
-    // Foreground: Dark walnut brown (text, strong contrast)
-    foreground: '#2C1810',
+    // Foreground: Slate Gray (deep mountain stone)
+    foreground: '#2C3639',
   },
 
   // ==========================================================================
