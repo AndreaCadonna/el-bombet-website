@@ -48,8 +48,8 @@ size:
 # -----------------------------------------------------------------------------
 # Image filenames relative to src/assets/images/el-bombet/
 images:
-  hero: "hero.svg"
-  thumbnail: "thumbnail.svg"
+  hero: "755394727.webp"
+  thumbnail: "755394665.webp"
   # Gallery can be a folder path (loads all images) or array of filenames
   gallery: "el-bombet"  # Will load from src/assets/images/el-bombet/
 
@@ -62,7 +62,7 @@ rooms:
       Camera matrimoniale spaziosa con letto matrimoniale large, armadio/guardaroba
       e biancheria da letto di qualità. La camera offre un'atmosfera tranquilla
       e confortevole per un riposo perfetto.
-    image: "bedroom.svg"
+    image: "755394661.webp"
     amenities:
       - "Letto matrimoniale large"
       - "Armadio/guardaroba"
@@ -73,7 +73,7 @@ rooms:
       Ingresso con soggiorno luminoso dotato di divano letto, TV a schermo piatto,
       zona pranzo con tavolo e scrivania per lavorare. Lo spazio perfetto per
       rilassarsi dopo una giornata alla scoperta di Trento.
-    image: "living-room.svg"
+    image: "755394692.webp"
     amenities:
       - "Divano letto"
       - "TV a schermo piatto"
@@ -85,7 +85,7 @@ rooms:
       Angolo cottura completamente attrezzato con tutto il necessario per preparare
       i vostri pasti. Include frigorifero, piano cottura, forno, microonde, lavatrice,
       macchina da caffè, bollitore elettrico e utensili da cucina completi.
-    image: "kitchen.svg"
+    image: "755394655.webp"
     amenities:
       - "Frigorifero"
       - "Piano cottura"
@@ -102,7 +102,7 @@ rooms:
       Bagno privato moderno con doccia o vasca, bidet, asciugacapelli e prodotti
       da bagno in omaggio. Asciugamani e carta igienica forniti per il vostro
       comfort.
-    image: "bathroom.svg"
+    image: "755394719.webp"
     amenities:
       - "Doccia o vasca"
       - "Bidet"
