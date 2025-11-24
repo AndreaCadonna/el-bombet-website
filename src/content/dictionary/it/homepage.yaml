@@ -14,111 +14,114 @@
 # -----------------------------------------------------------------------------
 hero:
   # Badge shown above the main heading
-  badge: "Vacation Rentals"
+  badge: "Appartamento nel Centro Storico"
 
   # Main heading (supports line break with \n)
-  title: "Welcome to"
-  title_highlight: "Your Property"
+  title: "Benvenuti a"
+  title_highlight: "El Bombet"
 
   # Subtitle below heading
-  subtitle: "Modern apartments in a perfect location"
+  subtitle: "Il tuo rifugio fra charme e comfort nel cuore di Trento"
 
   # Description paragraph
   description: >
-    Located in a prime location, our apartments offer the perfect balance
-    between tranquility and convenience. Choose from three solutions
-    designed for every type of stay.
+    Mini appartamento recentemente ristrutturato nel centro storico di Trento,
+    in un palazzo del 1700. A soli 5 minuti a piedi da Piazza Duomo e dai
+    Mercatini di Natale, ideale per vivere la città in comodità e tranquillità.
 
   # CTA Buttons
-  cta_primary: "Discover our properties"
-  cta_secondary: "Contact us"
+  cta_primary: "Scopri l'appartamento"
+  cta_secondary: "Contattaci"
 
   # Key features shown in hero
   features:
-    - title: "Prime Location"
-      subtitle: "Close to city center"
+    - title: "Posizione Centrale"
+      subtitle: "5 min da Piazza Duomo"
       icon: "location"
-    - title: "Modern Comfort"
-      subtitle: "All amenities included"
+    - title: "Palazzo Storico"
+      subtitle: "Edificio del 1700"
       icon: "check"
-    - title: "Flexible Check-in"
-      subtitle: "From 4:00 PM"
+    - title: "Check-in Privato"
+      subtitle: "Dalle 15:00 alle 23:30"
       icon: "clock"
 
   # Scroll indicator
-  scroll_text: "Scroll to discover"
+  scroll_text: "Scorri per scoprire"
 
   # Hero image alt text
-  image_alt: "Exterior view of the property"
+  image_alt: "Veduta esterna dell'appartamento El Bombet"
 
 # -----------------------------------------------------------------------------
 # About Section
 # -----------------------------------------------------------------------------
 about:
   section_id: "about"
-  title: "Your retreat, between nature and comfort"
+  title: "Il tuo rifugio nel cuore del Quartiere di San Pietro"
   description: >
-    Our property offers modern and comfortable apartments, perfect for
-    families, couples, groups of friends, or business travelers. Each
-    apartment has been designed to ensure a relaxing and worry-free stay.
+    El Bombet è situato in un tranquillo edificio tra i suggestivi vicoli
+    del Quartiere di San Pietro (storicamente "Contrada Todesca"). L'appartamento,
+    recentemente ristrutturato in un palazzo storico del 1700, offre tutti i
+    comfort moderni mantenendo il fascino del centro storico. Perfetto per
+    coppie, famiglie e viaggiatori d'affari.
 
   # Key selling points
   highlights:
-    - "Close to city center"
-    - "Modern and comfortable apartments"
-    - "Perfect for every type of guest"
-    - "Relaxing and worry-free stay"
+    - "Centro storico di Trento"
+    - "5 minuti a piedi da Piazza Duomo"
+    - "Palazzo del 1700 recentemente ristrutturato"
+    - "Ingresso indipendente al piano terra"
 
 # -----------------------------------------------------------------------------
 # Apartments Overview Section
 # -----------------------------------------------------------------------------
 apartments:
   section_id: "properties"
-  title: "Our Properties"
-  subtitle: "Choose the solution that suits you among our apartments, each with unique features to meet your needs."
+  title: "Il tuo Appartamento a Trento"
+  subtitle: "54 m² di comfort nel cuore del centro storico. Camera matrimoniale, soggiorno con divano letto, cucina attrezzata e bagno privato."
 
   # Comparison banner
   comparison_banner:
-    title: "Can't decide?"
-    description: "Contact us for personalized advice based on your needs."
-    cta: "Contact us"
+    title: "Hai domande?"
+    description: "Contattaci per maggiori informazioni sulla disponibilità e sui servizi."
+    cta: "Contattaci"
 
   # Card labels
   card:
-    guests_label: "Guests"
-    size_label: "Size"
-    view_details: "Learn more"
+    guests_label: "Ospiti"
+    size_label: "Superficie"
+    view_details: "Scopri di più"
 
 # -----------------------------------------------------------------------------
 # Comfort/Services Section
 # -----------------------------------------------------------------------------
 comfort:
   section_id: "amenities"
-  title: "Comfort and Services"
-  subtitle: "Everything you need for a perfect stay"
+  title: "Comfort e Servizi"
+  subtitle: "Tutto il necessario per un soggiorno perfetto"
   description: >
-    Our apartments are equipped with all modern comforts to guarantee
-    a superior stay experience.
+    El Bombet è dotato di tutti i comfort moderni: aria condizionata, riscaldamento,
+    WiFi gratuito, cucina completamente attrezzata, lavatrice e molto altro. L'ingresso
+    indipendente e il check-in privato garantiscono la massima privacy e flessibilità.
 
 # -----------------------------------------------------------------------------
 # Testimonials Section
 # -----------------------------------------------------------------------------
 testimonials:
   section_id: "testimonials"
-  title: "What our guests say"
-  subtitle: "Reviews from those who have already stayed with us"
+  title: "Cosa dicono i nostri ospiti"
+  subtitle: "Recensioni di chi ha già soggiornato da noi"
 
 # -----------------------------------------------------------------------------
 # CTA Section
 # -----------------------------------------------------------------------------
 cta:
-  title: "Book your stay"
-  description: "Contact us to check availability and book your apartment."
-  button: "Contact us now"
+  title: "Prenota il tuo soggiorno"
+  description: "Contattaci per verificare la disponibilità e prenotare il tuo appartamento nel cuore di Trento."
+  button: "Contattaci ora"
 
 # -----------------------------------------------------------------------------
 # SEO Metadata
 # -----------------------------------------------------------------------------
 seo:
-  title: "Vacation Rentals"
-  description: "Modern vacation apartments. Prime location, modern comfort, and flexible check-in."
+  title: "El Bombet - Appartamento Centro Storico Trento"
+  description: "Mini appartamento nel centro storico di Trento, a 5 minuti da Piazza Duomo. Palazzo del 1700, recentemente ristrutturato. WiFi, aria condizionata, cucina attrezzata."

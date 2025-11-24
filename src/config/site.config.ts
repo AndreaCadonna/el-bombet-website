@@ -22,15 +22,15 @@ const siteConfig: SiteConfig = {
   // ==========================================================================
   identity: {
     /** Your business/site name */
-    name: 'Your Property Name',
+    name: 'El Bombet',
 
     /** Short tagline (shown in some components) */
-    tagline: 'Vacation rentals in Your City',
+    tagline: 'Il tuo rifugio fra charme e comfort nel cuore di Trento',
 
     /** Logo configuration (optional - uses text if not provided) */
     logo: {
       // src: 'images/logo.png',  // Uncomment and add your logo
-      alt: 'Your Property Name',
+      alt: 'El Bombet',
       useText: true, // Set to false when using an image logo
     },
   },
@@ -40,27 +40,27 @@ const siteConfig: SiteConfig = {
   // ==========================================================================
   contact: {
     /** Primary contact email */
-    email: 'contact@example.com',
+    email: 'lorenzo@elbombet.it',
 
     /** Phone number with country code */
-    phone: '+1 XXX XXX XXXX', // TODO: Add actual phone number
+    phone: '+39 XXX XXX XXXX',
 
     /** WhatsApp number (optional) */
-    // whatsapp: '+1 XXX XXX XXXX',
+    // whatsapp: '+39 XXX XXX XXXX',
 
     /** Physical address */
     address: {
-      street: '123 Main Street',
-      city: 'Your City',
-      region: 'Your State/Region',
-      postalCode: '12345',
-      country: 'Country',
+      street: 'Via Dietro le Mura B, 13 – Piano terra',
+      city: 'Trento',
+      region: 'Trentino-Alto Adige',
+      postalCode: '38122',
+      country: 'Italia',
     },
 
     /** GPS coordinates for maps */
     coordinates: {
-      lat: 40.7128,
-      lng: -74.0060,
+      lat: 46.0664,
+      lng: 11.1257,
     },
   },
 
@@ -80,16 +80,14 @@ const siteConfig: SiteConfig = {
   // ==========================================================================
   legal: {
     /** Legal business name (if different from site name) */
-    companyName: 'Your Company Name',
+    companyName: 'El Bombet',
 
     /** VAT/Tax ID number */
     // vatNumber: 'XX12345678901',
 
     /** Registration codes (CIN, licenses, etc.) */
     registrationCodes: [
-      'LICENSE-001',
-      'LICENSE-002',
-      'LICENSE-003',
+      '022205-AT-019048',
     ],
 
     /** Legal page URLs */
@@ -134,16 +132,16 @@ const siteConfig: SiteConfig = {
   // ==========================================================================
   seo: {
     /** Default page title */
-    defaultTitle: 'Your Property Name',
+    defaultTitle: 'El Bombet - Appartamento nel centro storico di Trento',
 
     /** Title template (use %s for page title) */
-    titleTemplate: '%s — Your Property Name',
+    titleTemplate: '%s — El Bombet',
 
     /** Default meta description */
-    description: 'Vacation rentals for your perfect getaway in Your City',
+    description: 'Mini appartamento nel cuore di Trento, a 5 minuti da Piazza Duomo. Recentemente ristrutturato, ideale per coppie e famiglie. Prenotazioni disponibili.',
 
     /** Site language (ISO 639-1 code) */
-    language: 'en',
+    language: 'it',
 
     /** Text direction */
     textDirection: 'ltr',
@@ -162,8 +160,8 @@ const siteConfig: SiteConfig = {
 
     /** Twitter card settings */
     twitter: {
-      handle: '@yourproperty',
-      site: '@yourproperty',
+      handle: '@elbombet',
+      site: '@elbombet',
       cardType: 'summary_large_image',
     },
 
@@ -192,7 +190,7 @@ const siteConfig: SiteConfig = {
   // SITE URLS
   // ==========================================================================
   /** Full site URL (for sitemap, canonical URLs) */
-  url: 'https://yourdomain.com',
+  url: 'https://elbombet.it',
 
   /** Base path (usually '/') */
   basePath: '/',
