@@ -107,11 +107,11 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       boxShadow: {
-        // Shadows now use CSS variables from theme.config.ts
-        'luxury-sm': 'var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05))',
-        'luxury-md': 'var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.08))',
-        'luxury-lg': 'var(--shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 0.08))',
-        'luxury-gold': '0 0 20px 0 rgba(201, 169, 97, 0.2)',
+        // Theme-aware shadows using CSS variables from theme.config.ts
+        // Override Tailwind defaults with theme values
+        sm: 'var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05))',
+        md: 'var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.08))',
+        lg: 'var(--shadow-lg, 0 10px 15px -3px rgb(0 0 0 / 0.08))',
       },
       transitionDuration: {
         '400': '400ms',

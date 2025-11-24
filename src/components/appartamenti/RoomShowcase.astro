@@ -69,7 +69,7 @@ const roomImages = await Promise.all(
             <div class={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
               {/* Image Column */}
               <div class={`${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
-                <div class="relative rounded overflow-hidden shadow-luxury-lg group">
+                <div class="relative rounded overflow-hidden shadow-lg group">
                   <Image
                     src={roomImage}
                     alt={`${room.name} - Casa Negrano`}

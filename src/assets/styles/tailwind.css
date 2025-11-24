@@ -28,7 +28,7 @@
 
   /* Primary Button - Uses theme colors */
   .btn-primary {
-    @apply btn font-medium bg-primary text-primary-foreground border border-primary/20 hover:bg-accent hover:border-accent/20 shadow-luxury-sm hover:shadow-luxury-md;
+    @apply btn font-medium bg-primary text-primary-foreground border border-primary/20 hover:bg-accent hover:border-accent/20 shadow-sm hover:shadow-md;
   }
 
   /* Secondary Button (Outline) */
