@@ -26,75 +26,64 @@ const themeConfig: ThemeConfig = {
    * - 'minimal'  : Black, white, neutral
    * - 'custom'   : Use your own colors below
    */
-  preset: 'modern',
+  preset: 'custom',
 
   // ==========================================================================
-  // COLOR PALETTE (Optional Overrides)
+  // COLOR PALETTE - El Bombet Nature & Wood Theme
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset (not 'custom'), leave this section empty
-   * to use the preset's colors. Only add values here if you want to override
-   * specific colors from the preset.
-   *
-   * Colors can be specified as:
-   * - Hex: '#c9a961'
-   * - RGB: 'rgb(201, 169, 97)'
-   * - HSL: 'hsl(42, 50%, 58%)'
-   *
-   * When using 'custom' preset, all color values are required.
-   *
-   * Example override (uncomment to use):
-   * colors: {
-   *   primary: '#your-color',  // Override just the primary color
-   * },
+   * Custom color palette inspired by the historic 1700s building
+   * and natural elements of Trento:
+   * - Warm chestnut wood tones
+   * - Deep forest green from Alpine nature
+   * - Soft cream from historic stone walls
+   * - Earthy sage and olive accents
    */
   colors: {
-    // Leave empty to use preset colors, or add specific overrides here
-    // primary: '#c9a961',      // Uncomment to override preset primary color
-    // secondary: '#f5f2ed',    // Uncomment to override preset secondary color
-    // accent: '#a98b5f',       // Uncomment to override preset accent color
-    // muted: '#e8e4dd',        // Uncomment to override preset muted color
-    // background: '#faf8f5',   // Uncomment to override preset background color
-    // foreground: '#1a1a1a',   // Uncomment to override preset foreground color
+    // Primary: Warm chestnut wood (main brand color)
+    primary: '#8B5A3C',
+
+    // Secondary: Soft warm cream (historic stone walls)
+    secondary: '#F5F1E8',
+
+    // Accent: Deep forest green (Alpine nature, historic shutters)
+    accent: '#2F5233',
+
+    // Muted: Soft sage olive (nature-inspired neutrals)
+    muted: '#E5E8DD',
+
+    // Background: Warm ivory (light, welcoming)
+    background: '#FFFBF5',
+
+    // Foreground: Dark walnut brown (text, strong contrast)
+    foreground: '#2C1810',
   },
 
   // ==========================================================================
-  // TYPOGRAPHY (Optional Overrides)
+  // TYPOGRAPHY - Elegant & Historic
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset, leave this section empty to use the
-   * preset's typography. Only add values here if you want to override
-   * specific typography settings from the preset.
-   *
-   * Popular font options:
-   * - Headings: 'Playfair Display', 'Merriweather', 'Montserrat', 'Lora'
-   * - Body: 'Inter', 'Open Sans', 'Roboto', 'Source Sans Pro'
+   * Typography matching the historic charm of the 1700s building:
+   * - Playfair Display for elegant, classic headings
+   * - Inter for modern, readable body text
    */
   typography: {
-    // Leave empty to use preset typography, or add specific overrides here
-    // headingFont: 'Playfair Display',
-    // bodyFont: 'Inter Variable',
-    // baseFontSize: 16,
-    // lineHeight: 1.6,
+    headingFont: 'Playfair Display',
+    bodyFont: 'Inter Variable',
+    baseFontSize: 16,
+    lineHeight: 1.6,
   },
 
   // ==========================================================================
-  // STYLE (Optional Overrides)
+  // STYLE - Warm & Natural
   // ==========================================================================
   /**
-   * IMPORTANT: When using a preset, leave this section empty to use the
-   * preset's style settings. Only add values here if you want to override
-   * specific style settings from the preset.
-   *
-   * Border radius options: 'none', 'small', 'medium', 'large', 'full'
-   * Shadow intensity options: 'none', 'light', 'medium', 'strong'
-   * Transition speed options: 'fast', 'normal', 'slow'
+   * Style settings to complement the natural wood and green palette
    */
   style: {
-    // Leave empty to use preset style, or add specific overrides here
-    // borderRadius: 'small',
-    // shadowIntensity: 'medium',
-    // transitionSpeed: 'normal',
+    borderRadius: 'small',
+    shadowIntensity: 'medium',
+    transitionSpeed: 'normal',
   },
 
   // ==========================================================================
