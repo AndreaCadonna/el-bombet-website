@@ -40,22 +40,11 @@ const themeConfig: ThemeConfig = {
    * - Slate gray (mountain shadows and stone)
    */
   colors: {
-    // Primary: Dolomite Rose (warm pink-beige from famous mountain stone)
-    primary: '#C89B7B',
-
-    // Secondary: Soft Alpine Stone (warm light gray)
-    secondary: '#E8E3DD',
-
-    // Accent: Deep Alpine Blue (mountain sky and lakes)
-    accent: '#2B5F7C',
-
-    // Muted: Mountain Mist (soft blue-gray)
+    primary: '#C89B7B', // Dolomite Rose
+    secondary: '#F5F1ED', // Rich Walnut Brown
+    accent: '#B08262', // Deeper Rose - darkened version of primary
     muted: '#D4DADD',
-
-    // Background: Snow White (pristine, bright)
     background: '#FAFAF8',
-
-    // Foreground: Slate Gray (deep mountain stone)
     foreground: '#2C3639',
   },
 

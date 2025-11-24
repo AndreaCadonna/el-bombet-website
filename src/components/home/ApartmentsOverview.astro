@@ -21,7 +21,10 @@ const email = getContactEmail();
 const properties = await getProperties();
 ---
 
-<section id={content.section_id} class="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-background via-card to-secondary">
+<section
+  id={content.section_id}
+  class="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-background via-card to-secondary"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-12 md:mb-16">
@@ -35,22 +38,23 @@ const properties = await getProperties();
     </div>
 
     <!-- Apartments Grid -->
-    <div class={`grid grid-cols-1 gap-8 lg:gap-10 ${properties.length >= 2 ? 'md:grid-cols-2' : ''} ${properties.length >= 3 ? 'lg:grid-cols-3' : properties.length === 2 ? 'lg:grid-cols-2' : ''}`}>
+    <div
+      class={`grid justify-items-center grid-cols-1 gap-8 lg:gap-10 ${properties.length >= 2 ? 'md:grid-cols-2' : ''} ${properties.length >= 3 ? 'lg:grid-cols-3' : properties.length === 2 ? 'lg:grid-cols-2' : ''}`}
+    >
       {properties.map((property) => <ApartmentCard property={property} />)}
     </div>
 
     <!-- Additional Info Banner -->
-    <div class="mt-16 bg-gradient-to-r from-muted-foreground to-foreground rounded p-8 md:p-12 text-center text-white shadow-lg">
+    <div
+      class="mt-16 bg-gradient-to-r from-muted-foreground to-foreground rounded p-8 md:p-12 text-center text-white shadow-lg"
+    >
       <div class="max-w-4xl mx-auto">
         <h3 class="font-heading text-2xl md:text-3xl font-medium mb-4">{content.comparison_banner.title}</h3>
         <p class="text-lg mb-6 opacity-90 leading-relaxed">
           {content.comparison_banner.description}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contatti"
-            class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4"
-          >
+          <a href="/contatti" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
@@ -61,10 +65,7 @@ const properties = await getProperties();
             </svg>
             <span>{content.comparison_banner.cta}</span>
           </a>
-          <a
-            href={`mailto:${email}`}
-            class="btn-ghost inline-flex items-center justify-center gap-2 px-8 py-4"
-          >
+          <a href={`mailto:${email}`} class="btn-ghost inline-flex items-center justify-center gap-2 px-8 py-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
@@ -88,11 +89,16 @@ const properties = await getProperties();
         <table class="w-full bg-card rounded shadow-md overflow-hidden">
           <thead class="bg-muted-foreground text-white">
             <tr>
-              <th class="px-6 py-4 text-left font-medium uppercase tracking-wide text-sm">{common.navigation.apartments.slice(0, -1) || 'Appartamento'}</th>
+              <th class="px-6 py-4 text-left font-medium uppercase tracking-wide text-sm"
+                >{common.navigation.apartments.slice(0, -1) || 'Appartamento'}</th
+              >
               <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm">{common.labels.guests}</th>
               <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm">{common.labels.size}</th>
-              <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm">{common.labels.bedrooms}</th>
-              <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm">{common.labels.bathrooms}</th>
+              <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm">{common.labels.bedrooms}</th
+              >
+              <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm"
+                >{common.labels.bathrooms}</th
+              >
               <th class="px-6 py-4 text-center font-medium uppercase tracking-wide text-sm"></th>
             </tr>
           </thead>
@@ -107,7 +113,9 @@ const properties = await getProperties();
                     </div>
                   </td>
                   <td class="px-6 py-4 text-center text-foreground font-medium">{property.capacity.guests}</td>
-                  <td class="px-6 py-4 text-center text-foreground font-medium">{property.size.value} {property.size.unit === 'sqm' ? common.labels.sqm : 'ft²'}</td>
+                  <td class="px-6 py-4 text-center text-foreground font-medium">
+                    {property.size.value} {property.size.unit === 'sqm' ? common.labels.sqm : 'ft²'}
+                  </td>
                   <td class="px-6 py-4 text-center text-muted-foreground">{property.capacity.bedrooms}</td>
                   <td class="px-6 py-4 text-center text-muted-foreground">{property.capacity.bathrooms}</td>
                   <td class="px-6 py-4 text-center">
